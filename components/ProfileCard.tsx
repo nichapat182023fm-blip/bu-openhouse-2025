@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-
+import Image from 'next/image';
 
 const ProfileCard: React.FC = () => {
 
@@ -40,19 +40,22 @@ const ProfileCard: React.FC = () => {
                         {/* Avatar */}
                         <div className="w-36 h-36 mx-auto mb-2 relative">
                             {/* //TODO: Replace with actual profile picture */}
-                            <div className="w-full h-full bg-gradient-to-br from-blue-400 to-purple-600 rounded-full flex items-center justify-center text-white text-xl sm:text-2xl font-bold shadow-xl">
-                                PIC
-                            </div>                            
+                            <Image
+                                src="/images.jpg"
+                                alt="Profile"
+                                fill
+                                className="rounded-full object-cover"
+                            />
                             <div className="absolute inset-0 bg-gradient-to-br from-blue-400 to-purple-600 rounded-full animate-ping opacity-20"></div>
                         </div>
 
                         {/* Name and Title */}
                         {/* //TODO: Replace with actual name and title */}
                         <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-2">
-                            Name Surname
+                            Nichapat Kannakam
                         </h1>
                         <div className="inline-block px-4 py-2 bg-blue-500/20 backdrop-blur-sm rounded-full text-blue-200 text-sm sm:text-base border border-blue-400/30  mb-1">
-                            Your Role
+                            Fullstack
                         </div>
 
                         {/* Contact Information */}
